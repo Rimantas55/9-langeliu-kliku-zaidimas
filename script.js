@@ -1,7 +1,8 @@
-console.log("working");
+// console.log("working"); // check connetion
+//TODO GENERATE HTML VIA LOOP
 
-const next_btn = document.getElementById("btn1");
-const random_btn = document.getElementById("btn2");
+// const next_btn = document.getElementById("btn1");
+// const random_btn = document.getElementById("btn2");
 const block_btn = document.getElementsByClassName("block");
 
 //* SELECTS RANDOM NUMBER FROM 1-9
@@ -21,6 +22,7 @@ function clearCell() {
 
 //! DOES NOT START FROM RANDOM NUMBER
 //! AFTER RANDOM DOES NOT WORK NEXT BTN
+//TODO IF NUMBER NEXT REACHES 9 START FROM 1 AGAIN
 let index = 0;
 function next_red() {
     index++;
