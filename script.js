@@ -22,12 +22,18 @@ function clearCell() {
 
 //! DOES NOT START FROM RANDOM NUMBER
 //! AFTER RANDOM DOES NOT WORK NEXT BTN
+//! DOES NOT START FROM 1 AFTER HITTING 9
 //TODO IF NUMBER NEXT REACHES 9 START FROM 1 AGAIN
 let index = 0;
 function next_red() {
-    index++;
-    document.getElementById("nr_" + index).style.background = "red";
-    clearOneCell();
+    if (index <= 9) {
+        index++;
+        document.getElementById("nr_" + index).style.background = "red";
+        clearOneCell();
+    } else if (index === 10 && index >= 10) {
+        index = 0;
+        clearOneCell();
+    }
 }
 
 let indexGrey = -1;
