@@ -1,5 +1,18 @@
 // console.log("working"); // check connetion
-//TODO GENERATE HTML VIA LOOP
+document.body.onload = createGrid;
+
+function createGrid() {
+    const block_btn = document.getElementById("main_block");
+    for (let i = 1; i <= 9; i++) {
+        let block = document.createElement("div");
+        block.classList.add("block");
+        block.id = "nr_" + i;
+        let h1 = document.createElement("h5");
+        h1.innerText += i;
+        block.appendChild(h1);
+        block_btn.appendChild(block);
+    }
+}
 
 const block_btn = document.getElementsByClassName("block");
 var index = 1;
